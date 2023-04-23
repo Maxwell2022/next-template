@@ -8,6 +8,10 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "engines": {
+    "node": ">=18 <19",
+    "pnpm": ">=8 <9"
+  },
   "dependencies": {
     "@types/node": "18.15.13",
     "@types/react": "18.0.38",
@@ -26,5 +30,8 @@
     "eslint-config-prettier": "^8.8.0",
     "prettier": "^2.8.7",
     "prettier-plugin-tailwindcss": "^0.2.7"
+  },
+  "volta": {
+    "node": "18.16.0"
   }
 }

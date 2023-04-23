@@ -1,36 +1,67 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Prerequisite
 
-First, run the development server:
+You'll need `node v18+` installed globally (current LTS) and `pnpm v8+`.
+
+I recommend using `Volta` to manage the version of node on your machine.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+brew install volta
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```
+# install and set default version of node
+volta install node@18.15.0
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# install latest pnpm globally
+volta install pnpm
+```
 
-[http://localhost:3000/api/hello](http://localhost:3000/api/hello) is an endpoint that uses [Route Handlers](https://beta.nextjs.org/docs/routing/route-handlers). This endpoint can be edited in `app/api/hello/route.ts`.
+By default this template is pinning the version of node in the `package.json`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Use this template
 
-## Learn More
+This is the command to run in order to create an empty project with this template.
+It's setup with:
 
-To learn more about Next.js, take a look at the following resources:
+- Typescript
+- Tailwind
+- Eslint
+- Prettier
+- [tailwind-prettier](https://tailwindcss.com/blog/automatic-class-sorting-with-prettier) rules
+- VSCode plugins recommendations
+- pnpm
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npx create-next-app@latest \
+    --typescript \
+    --tailwind \
+    --eslint \
+    --use-pnpm \
+    --experimental-app \
+    --import-alias '@/*'
+    --example https://github.com/Maxwell2022/next-template
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To simplify, you can create an alias in your `~/.zshrc`:
 
-## Deploy on Vercel
+```bash
+alias "new-project"="npx create-next-app@latest --typescript --tailwind --eslint --use-pnpm --experimental-app --import-alias '@/*' --example https://github.com/Maxwell2022/next-template"
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Reload your config:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+source ~/.zshrc
+```
+
+And then simply call :
+
+```bash
+new-project project-name
+```
+
+## Todo
+
+- [ ] Add [renovate bot](https://docs.renovatebot.com/) configuration
