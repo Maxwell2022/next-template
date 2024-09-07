@@ -2,17 +2,20 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Prerequisite
 
-You'll need `node v18+` installed globally (current LTS) and `pnpm v8+`.
+You'll need `node v19+` installed globally (current LTS) and `pnpm v9+`.
 
 I recommend using `Volta` to manage the version of node on your machine.
 
 ```bash
 brew install volta
+
+# or
+curl -fsSL https://bun.sh/install | bash
 ```
 
 ```
 # install and set default version of node
-volta install node@18.15.0
+volta install node@20
 
 # install latest pnpm globally
 volta install pnpm
@@ -34,7 +37,7 @@ It's setup with:
 - pnpm
 
 ```bash
-npx create-next-app@latest \
+bun create next-app@latest \
     --typescript \
     --tailwind \
     --eslint \
@@ -47,7 +50,7 @@ npx create-next-app@latest \
 To simplify, you can create an alias in your `~/.zshrc`:
 
 ```bash
-alias "new-project"="npx create-next-app@latest --typescript --tailwind --eslint --use-pnpm --experimental-app --import-alias '@/*' --example https://github.com/Maxwell2022/next-template"
+alias "new-project"="bun create-next-app@latest --typescript --tailwind --eslint --use-pnpm --experimental-app --import-alias '@/*' --example https://github.com/Maxwell2022/next-template"
 ```
 
 Reload your config:
