@@ -1,0 +1,59 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Renovate dependency rules configuration",
+  "extends": [
+    "config:recommended",
+    ":automergeAll",
+    ":automergeRequireAllStatusChecks",
+    ":automergePr",
+    ":rebaseStalePrs",
+    ":semanticCommits",
+    ":timezone(Australia/Sydney)",
+    "schedule:earlyMondays"
+  ],
+  "minimumReleaseAge": "5 days",
+  "internalChecksFilter": "strict",
+  "rangeStrategy": "bump",
+  "baseBranches": ["main", "master"],
+  "automergeStrategy": "squash",
+  "packageRules": [
+    {
+      "groupName": "🚀 dependencies (non-major)",
+      "description": "Group all non-major updates into a single PR",
+      "groupSlug": "all-minor-patch",
+      "matchPackagePatterns": ["*"],
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "pinDigest",
+        "digest",
+        "rollback",
+        "bump"
+      ]
+    },
+    {
+      "groupName": "⚠️ dependencies (major) ⚠️",
+      "description": "Group all major updates into a single PR",
+      "matchPackagePatterns": ["*"],
+      "matchDepTypes": ["dependencies", "devDependencies"],
+      "matchUpdateTypes": ["major"]
+    },
+    {
+      "groupName": "⚙️ devDependencies (non-major)",
+      "description": "Group all non-major dev updates into a single PR",
+      "matchPackagePatterns": ["*"],
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "pinDigest",
+        "digest",
+        "rollback",
+        "bump"
+      ]
+    }
+  ]
+}
