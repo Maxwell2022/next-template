@@ -7,9 +7,3 @@ export async function GET(request: NextRequest) {
     status: 200,
   });
 }
-
-export const config = {
-  api: {
-    bodyParser: true,
-  },
-};
