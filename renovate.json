@@ -11,6 +11,7 @@
     ":timezone(Australia/Sydney)",
     "schedule:earlyMondays"
   ],
+  "updateNotScheduled": false,
   "minimumReleaseAge": "5 days",
   "internalChecksFilter": "strict",
   "rangeStrategy": "bump",
