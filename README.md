@@ -50,7 +50,7 @@ bun create next-app@latest \
 To simplify, you can create an alias in your `~/.zshrc`:
 
 ```bash
-alias "new-project"="bun create-next-app@latest --typescript --tailwind --eslint --use-pnpm --experimental-app --import-alias '@/*' --example https://github.com/Maxwell2022/next-template"
+alias "new-project"="npx create-next-app@latest --typescript --tailwind --eslint --use-pnpm --turbopack --import-alias '@/*' --example https://github.com/Maxwell2022/next-template"
 ```
 
 Reload your config:
