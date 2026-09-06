@@ -13,24 +13,24 @@
     "pnpm": ">=9 <10"
   },
   "dependencies": {
-    "next": "^15.1.0",
+    "next": "^16.3.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@types/node": "^22.10.2",
+    "@types/node": "^24.13.3",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.2",
     "@tailwindcss/postcss": "^4.0.0-beta.1",
     "@tailwindcss/typography": "^0.5.15",
-    "eslint": "^9.17.0",
-    "eslint-config-next": "^15.1.0",
-    "eslint-config-prettier": "^9.1.0",
+    "eslint": "^10.9.1",
+    "eslint-config-next": "^16.3.4",
+    "eslint-config-prettier": "^10.1.8",
     "postcss": "^8.4.49",
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.9",
     "tailwindcss": "^4.0.0-beta.8",
-    "typescript": "^5.7.2"
+    "typescript": "^7.0.2"
   },
   "volta": {
     "node": "22.12.0"
